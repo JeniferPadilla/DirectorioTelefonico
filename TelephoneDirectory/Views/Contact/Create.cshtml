@@ -1,0 +1,34 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "Directory Phone";
+}
+
+<h1 style="text-align:center">Register Contact</h1>
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<form asp-action="Create">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"> </span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Tel" class="form-label"></label>
+        <input type="text" asp-for="Tel" class="form-control" />
+        <span asp-validation-for="Tel" class="text-danger"> </span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Cel" class="form-label"></label>
+        <input type="text" asp-for="Cel" class="form-control" />
+        <span asp-validation-for="Cel" class="text-danger"> </span>
+    </div>
+
+    <button type="submit" class="btn btn-primary" >Create Contact</button>
+</form>
+
+
+@section Scripts{
+<partial name="_ValidationScriptsPartial" />
+}

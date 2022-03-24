@@ -1,0 +1,33 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: linear-gradient( #E4FE29, #0975E8);
+}
+
+.index1 {
+    font-size: 80px;
+    font-family:'Times New Roman', Times, serif;
+}
+footer{
+    background-color:black;
+    color:white;
+    text-align:center;
+}
+.imgIndex{
+    width:200px;
+
+}
