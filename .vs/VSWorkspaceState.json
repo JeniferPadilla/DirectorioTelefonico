@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\TelephoneDirectory",
-    "\\TelephoneDirectory\\Controllers",
+    "\\TelephoneDirectory\\Services",
     "\\TelephoneDirectory\\Views",
-    "\\TelephoneDirectory\\Views\\Contact"
+    "\\TelephoneDirectory\\Views\\Contact",
+    "\\TelephoneDirectory\\wwwroot",
+    "\\TelephoneDirectory\\wwwroot\\css"
   ],
   "SelectedNode": "\\TelephoneDirectory.sln",
   "PreviewInSolutionExplorer": false

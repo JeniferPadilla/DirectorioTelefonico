@@ -1,3 +1,4 @@
+using TelephoneDirectory.Interface;
 using TelephoneDirectory.Services;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -15,11 +15,20 @@ namespace TelephoneDirectory.Controllers
 
         public IActionResult Index()
         {
+
+          //  var message = "Hola prueba";
+
+            //ViewData["Message"] = message;
+            //  ViewBag.message = message;
+
+            ViewBag.message = "Hola prueba";
+
             return View();
         }
 
         public IActionResult Privacy()
         {
+         //   ViewBag.message = "hola";
             return View();
         }
 

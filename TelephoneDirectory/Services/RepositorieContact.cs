@@ -1,21 +1,11 @@
 ﻿using TelephoneDirectory.Models;
 using Dapper;
 using Microsoft.Data.SqlClient;
+using TelephoneDirectory.Interface;
 
 namespace TelephoneDirectory.Services
 {
-    public interface IRepositorieContact
-    {
-        Task Create(Contact contact);
-        Task<bool> Exist(string Name);
-        Task<IEnumerable<Contact>> getContacts();
-        Task<IEnumerable<Contact>> getContact( string nameContact);
-        Task Modify(Contact contact);
-        Task<Contact> getContactById(int id); // para el modify
-        Task Delete(int id);
-        //Task getContacts();
-        //void Create(Contact contact);
-    }
+    
     public class RepositorieContact : IRepositorieContact
     {
         private readonly string connectionString;
@@ -96,7 +86,13 @@ namespace TelephoneDirectory.Services
             await connection.ExecuteAsync("DELETE Contact WHERE Id = @Id", new { id });
         }
 
+        //Cantidad de contactos
+        public async Task<int> CountContact()
+        {
+            using var connection = new SqlConnection(connectionString);
+            int numberContact = await connection.QuerySingleAsync<int>("select COUNT(*) from Contact;");
+
+            return numberContact;
+        }
     }
-
-
 }

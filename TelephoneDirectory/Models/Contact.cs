@@ -14,6 +14,7 @@ namespace TelephoneDirectory.Models
         public string Name { get; set; }
         public string Tel { get; set; }
         public string Cel { get; set; }
+        public int NumberContact { get; set; }
 
     }
 }

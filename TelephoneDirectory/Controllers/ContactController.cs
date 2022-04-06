@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TelephoneDirectory.Interface;
 using TelephoneDirectory.Models;
 using TelephoneDirectory.Services;
 
@@ -29,7 +30,16 @@ namespace TelephoneDirectory.Controllers
                 var contact = await repositorieContact.getContacts();
                 return View(contact);
             }
-            
+
+
+            //var message = "Hola prueba";
+
+           // ViewData["Message"] = message;
+            //ViewBag.message = message;
+           
+          
+
+
         }
 
         public IActionResult Create()
@@ -55,6 +65,18 @@ namespace TelephoneDirectory.Controllers
 
                 return View(contact);
             }
+            var contactCount = await repositorieContact.CountContact();
+
+            if (contactCount > 10)
+            {
+
+                ModelState.AddModelError(nameof(contact.Name),
+                   $"ya hay 10 contactos no puede registrar mas");
+
+                return View(contact);
+            }
+
+
             await repositorieContact.Create(contact);
             return RedirectToAction("Index");
         }
@@ -102,8 +124,25 @@ namespace TelephoneDirectory.Controllers
             return RedirectToAction("Index");
         }
 
-        // Eliminar
-        [HttpGet]
+        public async Task<ActionResult> CountContact()
+        {
+            var contactCount = await repositorieContact.CountContact();
+            
+            Console.WriteLine(contactCount);
+           /// return View(contactCount);
+
+  
+                // permite acciones directas entre front y back
+                return Json($"The account already exist", contactCount);
+            
+
+            //return Json(true);
+
+        }
+
+
+            // Eliminar
+            [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
             
@@ -130,5 +169,7 @@ namespace TelephoneDirectory.Controllers
             await repositorieContact.Delete(id);
             return RedirectToAction("Index");
         }
+
+
     }
 }

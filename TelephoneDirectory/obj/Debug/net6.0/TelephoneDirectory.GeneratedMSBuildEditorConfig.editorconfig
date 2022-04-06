@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\jkpadillac\Desktop\Proyectos\.NET\TelephoneDirectory\TelephoneDirectory
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/jkpadillac/Desktop/Proyectos/.NET/TelephoneDirectory/TelephoneDirectory/Views/Contact/Count.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jkpadillac/Desktop/Proyectos/.NET/TelephoneDirectory/TelephoneDirectory/Views/Contact/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

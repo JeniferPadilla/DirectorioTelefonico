@@ -29,5 +29,16 @@ footer{
 }
 .imgIndex{
     width:200px;
+}
 
+.center-div {
+    padding-bottom: 1rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cardWidth {
+    width: 700px;
 }
